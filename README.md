@@ -1,17 +1,17 @@
-# TEMPLATE
+# BUSCO
 
 This session is part of [**Biodiversity Genomics Academy 2024**](https://thebgacademy.org/)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/thebgacademy/TEMPLATE)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/thebgacademy/busco)
 
 [YouTube Recording](https://www.youtube.com/@thebiodiversitygenomicsacademy) <-- To be updated after BGA24
 
 ## Session Leader(s)
-
+Matthew Berkeley - SIB, Switzerland
 
 ## Description
 
-
+Introduction to BUSCO, description of the pipelines and datasets, best practices and example use cases.
 
 ## Prerequisites
 
