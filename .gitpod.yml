@@ -1,8 +1,23 @@
-image: gitpod/workspace-full-vnc
+image: gitpod/workspace-base
 
-- name: SETUP
+tasks:
+- name: SETUP - Install MAMBA and BUSCO
   init: |
-    echo "Hello there - Welcome to GitPod"
+    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+    bash Mambaforge-$(uname)-$(uname -m).sh -b -p /workspace/conda && rm Mambaforge-$(uname)-$(uname -m).sh
+    /workspace/conda/bin/mamba init bash
+
+    source ${HOME}/.bashrc
+
+    mamba create -n busco -c conda-forge -c bioconda busco=5.7.0 -y
+
+    mamba clean --all -y
+
+  command: |
+    /workspace/conda/bin/mamba init bash
+    source ~/.bashrc
+    mamba activate busco
+    cd /workspace/busco/
 
 ports:
   - port: 5900
