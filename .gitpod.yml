@@ -15,7 +15,7 @@ tasks:
     mamba clean --all -y
     
   command: |
-    /workspace/conda/bin/mamba init bash
+    /workspace/mambaforge/bin/mamba init bash
     source ~/.bashrc
     mamba activate busco
     cd /workspace/busco/
