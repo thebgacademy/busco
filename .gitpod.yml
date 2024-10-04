@@ -17,7 +17,7 @@ tasks:
   command: |
     /workspace/conda/bin/mamba init bash
     source ~/.bashrc
-    export PATH=/workspace/mamba/bin/:$PATH
+    export PATH=/workspace/mambaforge/bin/:$PATH
     mamba activate busco
     cd /workspace/busco/
 
