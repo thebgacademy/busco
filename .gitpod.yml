@@ -1,17 +1,20 @@
 image: gitpod/workspace-base
 
 tasks:
-- name: SETUP - Install MAMBA and BUSCO
+
+- name: install mamba and tools for BGA23 workshop
   init: |
-    wget "https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Mambaforge-24.3.0-0-Linux-x86_64.sh"
-    bash Mambaforge-24.3.0-0-Linux-x86_64.sh -b -p /workspace/mambaforge && rm Mambaforge-24.3.0-0-Linux-x86_64.sh
+    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+    bash Mambaforge-$(uname)-$(uname -m).sh -b -p /workspace/conda && rm Mambaforge-$(uname)-$(uname -m).sh
     /workspace/conda/bin/mamba init bash
 
     source ${HOME}/.bashrc
 
-    mamba create -n busco -c conda-forge -c bioconda busco=5.7.0 -y
+    mamba create -n BioDivBUSCO -c conda-forge -c bioconda busco=5.5.0 -y
 
     mamba clean --all -y
+
+    mamba activate BioDivBUSCO
 
   command: |
     /workspace/conda/bin/mamba init bash
