@@ -20,7 +20,7 @@ tasks:
     mamba activate busco
     cd /workspace/busco/
     git clone https://gitlab.com/ezlab/busco.git
-    cd /busco
+    cd busco
     python -m pip install .
     cd ../
     mkdir exercises
