@@ -10,7 +10,7 @@ tasks:
 
     source ${HOME}/.bashrc
 
-    mamba create -n busco -c conda-forge -c bioconda busco=5.7.1 -y
+    mamba create -n busco -c conda-forge -c bioconda busco=5.8.0 -y
 
     mamba clean --all -y
     
@@ -19,10 +19,6 @@ tasks:
     source ~/.bashrc
     mamba activate busco
     cd /workspace/busco/
-    git clone https://gitlab.com/ezlab/busco.git
-    cd busco
-    python -m pip install .
-    cd ../
     mkdir exercises
     cd exercises/
     mkdir exercise1 exercise2 exercise3 exercise4
