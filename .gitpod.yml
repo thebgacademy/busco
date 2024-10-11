@@ -10,7 +10,7 @@ tasks:
 
     source ${HOME}/.bashrc
 
-    mamba create -n busco -c conda-forge -c bioconda busco=5.7.0 -y
+    mamba create -n busco -c conda-forge -c bioconda busco=5.7.1 -y
 
     mamba clean --all -y
     
@@ -19,15 +19,19 @@ tasks:
     source ~/.bashrc
     mamba activate busco
     cd /workspace/busco/
+    git clone https://gitlab.com/ezlab/busco.git
+    cd /busco
+    python -m pip install .
+    cd ../
     mkdir exercises
     cd exercises/
-    mkdir exercise1 exercise2 exercise3 exercise4 exercise5 exercise6 exercise7
+    mkdir exercise1 exercise2 exercise3 exercise4
     cd exercise1/
     wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/065/GCF_000009065.1_ASM906v1/GCF_000009065.1_ASM906v1_protein.faa.gz && gunzip GCF_000009065.1_ASM906v1_protein.faa.gz
     cd ../exercise2/
     wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/865/GCF_000008865.2_ASM886v2/GCF_000008865.2_ASM886v2_genomic.fna.gz && gunzip GCF_000008865.2_ASM886v2_genomic.fna.gz
     cd ../exercise3/
-    git clone https://gitlab.com/ezlab/busco.git
+    
     cd /workspace/busco/
 
 ports:
