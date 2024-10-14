@@ -34,7 +34,7 @@ tasks:
     cd ../../exercise6/
     mv ../bacteria_odb12.tar.gz .
     tar xzf bacteria_odb12.tar.gz
-    cp exercise1/GCF_000008865.2_ASM886v2_genomic.fna .
+    cp ../exercise1/GCF_000008865.2_ASM886v2_genomic.fna .
     cd /workspace/busco/
 
 ports:
