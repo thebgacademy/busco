@@ -84,12 +84,3 @@ It is possible to run BUSCO with a directory of input files instead of a single 
 cd /workspace/busco/exercises/exercise5
 busco -i batch_input/ -o batch_input_pipeline -m genome -l bacteria_odb10 -c 4
 ```
-
-### Exercise 6
-
-The v12 datasets will be released very soon. Here is a sneak preview of the bacteria_odb12 dataset:
-
-```
-cd /workspace/busco/exercises/exercise6
-busco -i GCF_000008865.2_ASM886v2_genomic.fna -o bacteria_genome_new -m genome -l bacteria_odb12 -c 4
-```
