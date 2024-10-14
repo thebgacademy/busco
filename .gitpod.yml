@@ -26,6 +26,8 @@ tasks:
     wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/065/GCF_000009065.1_ASM906v1/GCF_000009065.1_ASM906v1_protein.faa.gz && gunzip GCF_000009065.1_ASM906v1_protein.faa.gz
     cd ../exercise2/
     wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/865/GCF_000008865.2_ASM886v2/GCF_000008865.2_ASM886v2_genomic.fna.gz && gunzip GCF_000008865.2_ASM886v2_genomic.fna.gz
+    cd ../exercise4/
+    cp ../exercise2/GCF_000008865.2_ASM886v2_genomic.fna .
     cd ../exercise5/
     mkdir batch_input
     cd batch_input
