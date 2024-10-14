@@ -30,8 +30,8 @@ tasks:
     mkdir batch_input
     cd batch_input
     wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/065/GCF_000009065.1_ASM906v1/GCF_000009065.1_ASM906v1_genomic.fna.gz && gunzip GCF_000009065.1_ASM906v1_genomic.fna.gz
-    cp exercise2/GCF_000008865.2_ASM886v2_genomic.fna batch_input    
-    cd ../exercise6/
+    cp ../../exercise2/GCF_000008865.2_ASM886v2_genomic.fna .    
+    cd ../../exercise6/
     mv ../bacteria_odb12.tar.gz .
     tar xzf bacteria_odb12.tar.gz
     cp exercise1/GCF_000008865.2_ASM886v2_genomic.fna .
